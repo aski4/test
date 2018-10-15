@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternsGoF", "PatternsGoF\PatternsGoF.csproj", "{F14DC71D-6F5D-422C-B0B7-0C50D3311638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternConsole", "PatternConsole\PatternConsole.csproj", "{9F731890-B1A6-42D1-B814-6555656C3774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F14DC71D-6F5D-422C-B0B7-0C50D3311638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14DC71D-6F5D-422C-B0B7-0C50D3311638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14DC71D-6F5D-422C-B0B7-0C50D3311638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14DC71D-6F5D-422C-B0B7-0C50D3311638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F731890-B1A6-42D1-B814-6555656C3774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F731890-B1A6-42D1-B814-6555656C3774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F731890-B1A6-42D1-B814-6555656C3774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F731890-B1A6-42D1-B814-6555656C3774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E7B1C84-4B39-457F-85B3-0DCC7684B6AB}
+	EndGlobalSection
+EndGlobal

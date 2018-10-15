@@ -3,3 +3,6 @@
 ################################################################################
 
 /PatternsGoF/obj/Debug
+/PatternConsole/obj/Debug
+/.vs/PatternsGoF/v15/Server/sqlite3
+/.vs/PatternsGoF/v15/.suo
