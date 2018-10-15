@@ -42,10 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapter\AdapterFormal.cs" />
+    <Compile Include="Adapter\AdapterReal\Auto.cs" />
+    <Compile Include="Adapter\AdapterReal\Camel.cs" />
+    <Compile Include="Adapter\AdapterReal\CamelToTransportAdapter.cs" />
+    <Compile Include="Adapter\AdapterReal\Driver.cs" />
+    <Compile Include="Adapter\AdapterReal\IAnimal.cs" />
+    <Compile Include="Adapter\AdapterReal\ITransport.cs" />
+    <Compile Include="Adapter\AdapterReal\Ship.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Adapter\AdapterReal\" />
     <Folder Include="Bridge\" />
   </ItemGroup>
   <ItemGroup>

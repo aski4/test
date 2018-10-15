@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PatternsGoF.Adapter
 {
     /// <summary>
-    /// MainApp startup class for Structural
+    /// AdapterFormal startup class for Structural
     /// Adapter Design Pattern.
     /// </summary>
     public class AdapterFormal
