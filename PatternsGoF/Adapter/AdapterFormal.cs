@@ -10,7 +10,7 @@ namespace PatternsGoF.Adapter
     /// AdapterFormal startup class for Structural
     /// Adapter Design Pattern.
     /// </summary>
-    public class AdapterFormal
+    public class AdapterFormal          // Client
     {
         public void Main()
         {

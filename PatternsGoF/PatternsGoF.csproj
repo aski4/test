@@ -49,13 +49,19 @@
     <Compile Include="Adapter\AdapterReal\IAnimal.cs" />
     <Compile Include="Adapter\AdapterReal\ITransport.cs" />
     <Compile Include="Adapter\AdapterReal\Ship.cs" />
+    <Compile Include="Bridge\BridgeFormal.cs" />
+    <Compile Include="Bridge\BridgeReal\Book.cs" />
+    <Compile Include="Bridge\BridgeReal\FAQ.cs" />
+    <Compile Include="Bridge\BridgeReal\IFormatter.cs" />
+    <Compile Include="Bridge\BridgeReal\Manuscript.cs" />
+    <Compile Include="Bridge\BridgeReal\ReverseForrmatter.cs" />
+    <Compile Include="Bridge\BridgeReal\StandartFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bridge\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Adapter\UMLImage\adapter.png" />
+    <Content Include="Bridge\UMLImage\bridge.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

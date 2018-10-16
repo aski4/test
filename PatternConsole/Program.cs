@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Data.Common;
+using System.Collections.Generic;
 using PatternsGoF.Adapter;
 using PatternsGoF.Adapter.AdapterReal;
+using PatternsGoF.Bridge;
+using PatternsGoF.Bridge.BridgeReal;
 
 namespace PatternConsole
 {
@@ -16,8 +15,15 @@ namespace PatternConsole
             Console.OutputEncoding = Encoding.UTF8;
             Program program = new Program();
 
-            program.AdapterFormal();
-            program.AdapterReal();  
+            #region AdapterConsole
+            //program.AdapterFormal();
+            //program.AdapterReal();
+            #endregion
+
+            #region BridgeConsole
+            program.BridgeFormal();
+            program.BridgeReal();
+            #endregion
         }
 
         private void AdapterFormal()
@@ -40,6 +46,41 @@ namespace PatternConsole
             ITransport camelTrasport = new CamelToTransportAdapter(camel);
 
             driver.Travel(camelTrasport);
+            Console.ReadKey();
+        }
+
+        private void BridgeFormal()
+        {
+            BridgeFormal bridgeFormal = new BridgeFormal();
+            bridgeFormal.Main();
+            Console.ReadKey();
+        }
+        private void BridgeReal()
+        {
+            List<Manuscript> manuscripts = new List<Manuscript>();
+            StandartFormatter standartFormatter = new StandartFormatter();
+            ReverseForrmatter reverseForrmatter = new ReverseForrmatter();
+
+            var faq = new FAQ(standartFormatter)
+            {
+                Title = "The Bridge Pattern FAQ"
+            };
+            faq.Questions.Add("What is it?", "a design pattern");
+            faq.Questions.Add("When do we use it?", "When you need to separate an abastraction from an implementation.");
+            manuscripts.Add(faq);
+
+            var book = new Book(reverseForrmatter)
+            {
+                Title = "1Q84",
+                Author = "Haruki Murakami",
+                Text = "The story begins in gridlock on a Tokyo superhighway bridge."
+            };
+            manuscripts.Add(book);
+
+            foreach (var item in manuscripts)
+            {
+                item.Print();
+            }
             Console.ReadKey();
         }
     }
