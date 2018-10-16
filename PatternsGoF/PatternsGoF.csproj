@@ -56,12 +56,19 @@
     <Compile Include="Bridge\BridgeReal\Manuscript.cs" />
     <Compile Include="Bridge\BridgeReal\ReverseForrmatter.cs" />
     <Compile Include="Bridge\BridgeReal\StandartFormatter.cs" />
+    <Compile Include="Builder\BuilderFormal.cs" />
+    <Compile Include="Builder\BuilderReal\ClubSandwichBuilder.cs" />
+    <Compile Include="Builder\BuilderReal\Sandwich.cs" />
+    <Compile Include="Builder\BuilderReal\SandwichBuilder.cs" />
+    <Compile Include="Builder\BuilderReal\SandwichMaker.cs" />
+    <Compile Include="Builder\BuilderReal\StandartSandwichBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Content Include="Adapter\UMLImage\adapter.png" />
     <Content Include="Bridge\UMLImage\bridge.png" />
+    <Content Include="Builder\UMLImage\builder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

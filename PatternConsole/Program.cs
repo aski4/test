@@ -5,6 +5,8 @@ using PatternsGoF.Adapter;
 using PatternsGoF.Adapter.AdapterReal;
 using PatternsGoF.Bridge;
 using PatternsGoF.Bridge.BridgeReal;
+using PatternsGoF.Builder;
+using PatternsGoF.Builder.BuilderReal;
 
 namespace PatternConsole
 {
@@ -21,8 +23,13 @@ namespace PatternConsole
             #endregion
 
             #region BridgeConsole
-            program.BridgeFormal();
-            program.BridgeReal();
+            //program.BridgeFormal();
+            //program.BridgeReal();
+            #endregion
+
+            #region Builder
+            program.BuilderFormal();
+            program.BuilderReal();
             #endregion
         }
 
@@ -82,6 +89,30 @@ namespace PatternConsole
                 item.Print();
             }
             Console.ReadKey();
+        }
+
+        private void BuilderFormal()
+        {
+            BuilderFormal builderFormal = new BuilderFormal();
+            builderFormal.Main();
+            Console.ReadKey();
+        }
+        private void BuilderReal()
+        {
+
+            var sandwitchMaker = new SandwichMaker(new StandartSandwichBuilder());
+            sandwitchMaker.BuildSandwich();
+            var standartSandwich = sandwitchMaker.GetSandwich();
+
+            standartSandwich.Display();
+            Console.ReadLine();
+
+            sandwitchMaker = new SandwichMaker(new ClubSandwichBuilder());
+            sandwitchMaker.BuildSandwich();
+            var clubSandwich = sandwitchMaker.GetSandwich();
+
+            clubSandwich.Display();
+            Console.ReadLine();
         }
     }
 }
