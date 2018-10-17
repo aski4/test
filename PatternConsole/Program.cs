@@ -7,6 +7,8 @@ using PatternsGoF.Bridge;
 using PatternsGoF.Bridge.BridgeReal;
 using PatternsGoF.Builder;
 using PatternsGoF.Builder.BuilderReal;
+using PatternsGoF.ChainOfResponsobility;
+using PatternsGoF.ChainOfResponsobility.CORReal;
 
 namespace PatternConsole
 {
@@ -28,8 +30,12 @@ namespace PatternConsole
             #endregion
 
             #region Builder
-            program.BuilderFormal();
-            program.BuilderReal();
+            //program.BuilderFormal();
+            //program.BuilderReal();
+            #endregion
+            #region CoR
+            //program.ChainOfResponsobilityFormal();
+            program.ChainOfResponsobilityReal();
             #endregion
         }
 
@@ -113,6 +119,39 @@ namespace PatternConsole
 
             clubSandwich.Display();
             Console.ReadLine();
+        }
+
+        private void ChainOfResponsobilityFormal()
+        {
+            ChainOfResponsobilityFormal CoR = new ChainOfResponsobilityFormal();
+            CoR.Main();
+            Console.ReadKey();
+            Console.WriteLine();
+        }
+        private void ChainOfResponsobilityReal()
+        {
+            Hand[] hands = new Hand[10];
+            Deck deck = new Deck();
+            deck.Shuffle();
+
+            for (int i = 0; i < hands.Length; i++)
+            {
+                hands[i] = new Hand();
+            }
+
+            for (int cardCount = 0; cardCount < 5; cardCount++)
+            {
+                foreach (Hand hand in hands)
+                {
+                    hand.Add(deck.Deal());
+                }
+            }
+
+            foreach (Hand item in hands)
+            {
+                Console.WriteLine("{0} ({1})", item.Rank, item);
+            }
+            Console.ReadKey();
         }
     }
 }

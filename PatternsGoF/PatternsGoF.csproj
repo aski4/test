@@ -62,6 +62,13 @@
     <Compile Include="Builder\BuilderReal\SandwichBuilder.cs" />
     <Compile Include="Builder\BuilderReal\SandwichMaker.cs" />
     <Compile Include="Builder\BuilderReal\StandartSandwichBuilder.cs" />
+    <Compile Include="ChainOfResponsobility\ChainOfResponsobilityFormal.cs" />
+    <Compile Include="ChainOfResponsobility\CORReal\Card.cs" />
+    <Compile Include="ChainOfResponsobility\CORReal\Catagorizer.cs" />
+    <Compile Include="ChainOfResponsobility\CORReal\Deck.cs" />
+    <Compile Include="ChainOfResponsobility\CORReal\Hand.cs" />
+    <Compile Include="ChainOfResponsobility\CORReal\HandCatagorizer.cs" />
+    <Compile Include="ChainOfResponsobility\CORReal\HandCatagorizerChain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -69,6 +76,7 @@
     <Content Include="Adapter\UMLImage\adapter.png" />
     <Content Include="Bridge\UMLImage\bridge.png" />
     <Content Include="Builder\UMLImage\builder.png" />
+    <Content Include="ChainOfResponsobility\UMLImage\chainofresponsibility.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
