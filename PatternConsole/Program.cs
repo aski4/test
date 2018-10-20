@@ -9,6 +9,7 @@ using PatternsGoF.Builder;
 using PatternsGoF.Builder.BuilderReal;
 using PatternsGoF.ChainOfResponsobility;
 using PatternsGoF.ChainOfResponsobility.CORReal;
+using System.IO;
 
 namespace PatternConsole
 {
@@ -33,9 +34,14 @@ namespace PatternConsole
             //program.BuilderFormal();
             //program.BuilderReal();
             #endregion
+
             #region CoR
             //program.ChainOfResponsobilityFormal();
-            program.ChainOfResponsobilityReal();
+            for (int i = 0; i < 15000; i++)
+            {
+                program.ChainOfResponsobilityReal();
+            }
+            Console.ReadKey();
             #endregion
         }
 
@@ -146,12 +152,14 @@ namespace PatternConsole
                     hand.Add(deck.Deal());
                 }
             }
-
-            foreach (Hand item in hands)
+            using (StreamWriter fs = new StreamWriter(@"D:\Poker.txt", true, Encoding.UTF8))
             {
-                Console.WriteLine("{0} ({1})", item.Rank, item);
+                foreach (Hand item in hands)
+                {
+                    Console.WriteLine("{0} ({1})", item.Rank, item);
+                    fs.WriteLine("{0} ({1})", item.Rank, item);
+                }
             }
-            Console.ReadKey();
         }
     }
 }

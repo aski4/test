@@ -4,5 +4,7 @@
 
 /PatternsGoF/obj/Debug
 /PatternConsole/obj/Debug
+/PatternsGof/bin
+/PatternConsole/bin
 /.vs/PatternsGoF/v15/Server/sqlite3
 /.vs/PatternsGoF/v15/.suo
