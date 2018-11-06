@@ -37,14 +37,15 @@ namespace PatternConsole
 
             #region CoR
             //program.ChainOfResponsobilityFormal();
-            for (int i = 0; i < 15000; i++)
-            {
-                program.ChainOfResponsobilityReal();
-            }
-            Console.ReadKey();
+            //for (int i = 0; i < 15000; i++)
+            //{
+            //    program.ChainOfResponsobilityReal();
+            //}
+            //Console.ReadKey();
             #endregion
-        }
 
+        }
+        #region PrivateMethods
         private void AdapterFormal()
         {
             AdapterFormal adapterFormal = new AdapterFormal();
@@ -161,5 +162,6 @@ namespace PatternConsole
                 }
             }
         }
+        #endregion
     }
 }
