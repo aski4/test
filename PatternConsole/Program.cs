@@ -9,6 +9,8 @@ using PatternsGoF.Builder;
 using PatternsGoF.Builder.BuilderReal;
 using PatternsGoF.ChainOfResponsobility;
 using PatternsGoF.ChainOfResponsobility.CORReal;
+using PatternsGoF.Command;
+using PatternsGoF.Command.CommandReal;
 using System.IO;
 
 namespace PatternConsole
@@ -42,6 +44,11 @@ namespace PatternConsole
             //    program.ChainOfResponsobilityReal();
             //}
             //Console.ReadKey();
+            #endregion
+
+            #region Command
+            //program.CommandFormal();
+            //program.CommandReal();
             #endregion
 
         }
@@ -161,6 +168,26 @@ namespace PatternConsole
                     fs.WriteLine("{0} ({1})", item.Rank, item);
                 }
             }
+        }
+
+        private void CommandFormal()
+        {
+            CommandFormal command = new CommandFormal();
+            command.Main();
+            Console.ReadKey();
+        }
+        private void CommandReal()
+        {
+            User user = new User();
+            user.Compute('+', 100);
+            user.Compute('-', 50);
+            user.Compute('*', 10);
+            user.Compute('/', 2);
+
+            user.Undo(4);
+            user.Redo(3);
+
+            Console.ReadKey();
         }
         #endregion
     }

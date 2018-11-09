@@ -70,11 +70,13 @@
     <Compile Include="ChainOfResponsobility\CORReal\HandCatagorizer.cs" />
     <Compile Include="ChainOfResponsobility\CORReal\HandCatagorizerChain.cs" />
     <Compile Include="Command\CommandFormal.cs" />
+    <Compile Include="Command\CommandReal\Calculator.cs" />
+    <Compile Include="Command\CommandReal\CalculatorCommand.cs" />
+    <Compile Include="Command\CommandReal\ICommand.cs" />
+    <Compile Include="Command\CommandReal\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Command\CommandReal\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Adapter\UMLImage\adapter.png" />
     <Content Include="Bridge\UMLImage\bridge.png" />
