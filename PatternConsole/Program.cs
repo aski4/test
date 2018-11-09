@@ -11,6 +11,7 @@ using PatternsGoF.ChainOfResponsobility;
 using PatternsGoF.ChainOfResponsobility.CORReal;
 using PatternsGoF.Command;
 using PatternsGoF.Command.CommandReal;
+using PatternsGoF.Composite;
 using System.IO;
 
 namespace PatternConsole
@@ -49,6 +50,10 @@ namespace PatternConsole
             #region Command
             //program.CommandFormal();
             //program.CommandReal();
+            #endregion
+
+            #region Composite
+            program.CompositeFormal();
             #endregion
 
         }
@@ -187,6 +192,13 @@ namespace PatternConsole
             user.Undo(4);
             user.Redo(3);
 
+            Console.ReadKey();
+        }
+
+        private void CompositeFormal()
+        {
+            CompositeFormal composite = new CompositeFormal();
+            composite.Main();
             Console.ReadKey();
         }
         #endregion

@@ -74,15 +74,19 @@
     <Compile Include="Command\CommandReal\CalculatorCommand.cs" />
     <Compile Include="Command\CommandReal\ICommand.cs" />
     <Compile Include="Command\CommandReal\User.cs" />
+    <Compile Include="Composite\CompositeFormal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Composite\CompositeReal\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Adapter\UMLImage\adapter.png" />
     <Content Include="Bridge\UMLImage\bridge.png" />
     <Content Include="Builder\UMLImage\builder.png" />
     <Content Include="ChainOfResponsobility\UMLImage\chainofresponsibility.png" />
     <Content Include="Command\UMLImage\command.png" />
+    <Content Include="Composite\UMLImage\composite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
